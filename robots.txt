@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://kuposu.com/sitemap.xml
+Sitemap: https://kuposu.co/sitemap.xml
 
 # Disallow crawling of admin or private areas (if any in the future)
 Disallow: /admin/
