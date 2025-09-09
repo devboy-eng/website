@@ -277,60 +277,19 @@ function showLoginModal() {
     });
 }
 
-// Cal.com integration function
+// Calendly integration function
 function openCalBooking() {
-    // Create Cal.com booking modal
-    const modal = createModal('Book a Demo - KuposuBot', `
-        <div class="cal-booking-content">
-            <div class="booking-header">
-                <h3>Schedule Your Personal Demo</h3>
-                <p>Get a personalized walkthrough of KuposuBot's Instagram automation features and see how it can grow your business.</p>
-            </div>
-            <div class="cal-embed-container">
-                <iframe 
-                    src="https://cal.com/kuposubot/demo?embed=true&theme=light" 
-                    width="100%" 
-                    height="600" 
-                    frameborder="0"
-                    style="border-radius: 8px;">
-                </iframe>
-            </div>
-            <div class="booking-footer">
-                <p><i class="fas fa-clock"></i> 30-minute session</p>
-                <p><i class="fas fa-video"></i> Live demonstration</p>
-                <p><i class="fas fa-question-circle"></i> Q&A session included</p>
-            </div>
-        </div>
-    `);
-    
-    // Add Cal.com embed script if not already loaded
-    if (!window.Cal) {
-        loadCalScript();
+    // Open Calendly popup widget
+    if (window.Calendly) {
+        Calendly.initPopupWidget({
+            url: 'https://calendly.com/nagarjunbhoopalam'
+        });
+    } else {
+        // Fallback: open in new window if Calendly widget not loaded
+        window.open('https://calendly.com/nagarjunbhoopalam', '_blank', 'width=800,height=700,scrollbars=yes,resizable=yes');
     }
 }
 
-// Load Cal.com embed script
-function loadCalScript() {
-    const script = document.createElement('script');
-    script.src = 'https://app.cal.com/embed/embed.js';
-    script.async = true;
-    document.head.appendChild(script);
-    
-    script.onload = function() {
-        // Initialize Cal embed
-        if (window.Cal) {
-            window.Cal('init', {
-                origin: 'https://app.cal.com'
-            });
-        }
-    };
-}
-
-// Alternative function for direct Cal.com popup (if you prefer popup instead of modal)
-function openCalPopup() {
-    // Open Cal.com booking page in a new window/tab
-    window.open('https://cal.com/kuposubot/demo', '_blank', 'width=800,height=700,scrollbars=yes,resizable=yes');
-}
 
 // Contact Us form modal
 function showContactModal() {
