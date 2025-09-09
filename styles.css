@@ -120,6 +120,14 @@ p {
     align-items: center;
 }
 
+.nav-brand {
+    margin-left: 20px;
+}
+
+.nav-brand a {
+    text-decoration: none;
+}
+
 .nav-brand h2 {
     background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     -webkit-background-clip: text;
@@ -295,7 +303,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-150px) translateX(30px);
+    transform: translateY(-150px);
 }
 
 .orbit-container {
@@ -2380,7 +2388,7 @@ html {
     background: white;
 }
 
-.features-grid {
+.how-it-works .features-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -3081,7 +3089,7 @@ html {
         padding: 60px 0;
     }
     
-    .features-grid {
+    .how-it-works .features-grid {
         gap: 3rem;
     }
     
