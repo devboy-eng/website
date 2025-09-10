@@ -3090,16 +3090,19 @@ html {
     }
     
     .how-it-works .features-grid {
-        gap: 3rem;
+        gap: 2rem;
+        padding: 0 10px;
     }
     
     .feature-showcase {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+        gap: 2rem;
     }
     
     .phone-mockup {
-        width: 200px;
-        height: 360px;
+        width: 220px;
+        height: 380px;
+        margin: 0 auto;
     }
     
     .phone-mockup::before {
@@ -3109,9 +3112,92 @@ html {
     }
     
     .feature-info h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+        text-align: center;
+    }
+    
+    .feature-info p {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .benefit-item {
+        font-size: 13px;
+        text-align: left;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .page-header .subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .how-it-works .features-grid {
+        gap: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .feature-showcase {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .phone-mockup {
+        width: 180px;
+        height: 320px;
+    }
+    
+    .phone-mockup::before {
+        width: 60px;
+        height: 18px;
+        top: 4px;
+    }
+    
+    .feature-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-info p {
+        font-size: 13px;
+    }
+    
+    .benefit-item {
+        font-size: 12px;
+    }
+    
+    .page-header {
+        padding: 3rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-content p {
+        font-size: 14px;
     }
 }
